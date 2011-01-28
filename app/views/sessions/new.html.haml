@@ -2,9 +2,9 @@
 
 = form_tag sessions_path do
   %p
-    = label_tag :username
+    %label{for: "login"} Username or Email
     %br
-    = text_field_tag :username, params[:username]
+    = text_field_tag :login, params[:login]
   %p
     = label_tag :password
     %br
