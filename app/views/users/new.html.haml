@@ -19,3 +19,7 @@
     %br
     = f.password_field :password_confirmation
   %p.button= f.submit
+
+%h2 Users
+%ul#users
+  =raw User.all.inject('') { |str,user| str << "<li>#{user.username}</li>" }
